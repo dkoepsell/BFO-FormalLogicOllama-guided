@@ -1,0 +1,4 @@
+# requirements.txt
+
+spacy>=3.0
+rdflib>=6.0
