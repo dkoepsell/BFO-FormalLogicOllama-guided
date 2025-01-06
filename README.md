@@ -26,8 +26,10 @@ We also integrate **rdflib** to **export** the knowledge graph as an **OWL** fil
 - [`rdflib`](https://pypi.org/project/rdflib/) for ontology export  
 - A local [Ollama](https://docs.ollama.ai/) installation for LLM-based clarifications (model name default is `llama3`).
 
-You can install these with:
 
-```bash
-pip install -r requirements.txt
-python -m spacy download en_core_web_sm
+## Notes
+spaCy is used for NLP parsing (finding subjects, objects, negation words, etc.).
+rdflib is for RDF/OWL generation.
+If you use a specific version of spaCy or rdflib, you can pin the version explicitly, e.g. spacy==3.5.1.
+This file doesn’t include Ollama because Ollama isn’t installed via pip; it’s a separate local LLM runtime. Make sure Ollama is installed on your system per its own instructions.
+With these packages installed, plus the en_core_web_sm model downloaded, you’ll be able to run the BFOtoSFL.py script and build your ontology.
